@@ -1,13 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import { MdDirectionsRun, MdFitnessCenter, MdOutlineSportsKabaddi } from 'react-icons/md';
+
 
 const Skills = () => {
     const [activeCategory, setActiveCategory] = useState('Frontend');
 
     const skillCategories = {
         Strength: {
-            icon: '�️',
+            icon: <MdOutlineSportsKabaddi className="inline text-orange-400" size={22} />, 
             skills: [
                 { name: 'Strength Training', level: 95, color: 'from-orange-600 to-orange-800' },
                 { name: 'Hypertrophy Programming', level: 90, color: 'from-orange-500 to-orange-700' },
@@ -15,7 +17,7 @@ const Skills = () => {
             ]
         },
         Conditioning: {
-            icon: '🏃',
+            icon: <MdDirectionsRun className="inline text-orange-400" size={22} />, 
             skills: [
                 { name: 'Cardio Programming', level: 90, color: 'from-orange-500 to-orange-700' },
                 { name: 'Interval Training', level: 88, color: 'from-orange-400 to-orange-600' },
@@ -23,7 +25,7 @@ const Skills = () => {
             ]
         },
         Coaching: {
-            icon: '�️',
+            icon: <MdFitnessCenter className="inline text-orange-400" size={22} />, 
             skills: [
                 { name: 'Personal Coaching', level: 95, color: 'from-orange-600 to-orange-800' },
                 { name: 'Group Classes', level: 90, color: 'from-orange-500 to-orange-700' },
@@ -42,22 +44,22 @@ const Skills = () => {
 
     const certifications = [
         {
-            name: 'IBM Data Science Professional Certificate',
-            issuer: 'IBM    ',
-            date: '2024',
-            badge: 'https://www.coursera.org/account/accomplishments/specialization/certificate/IM95Y8BNOPYB'
-        },
-        {
-            name: 'Jenkins Specialization',
-            issuer: 'LeanKartS',
-            date: '2024',
-            badge: 'https://www.coursera.org/account/accomplishments/specialization/certificate/6PG0PDA03O3N'
-        },
-        {
-            name: '.Net Full Stack Development',
-            issuer: 'BoardInfinity',
+            name: 'CLub Competition Winner  Morocco',
+            issuer: 'Morocco Sports Federation',
             date: '2022',
-            badge: 'https://www.coursera.org/account/accomplishments/certificate/S41GXRZSPNJV'
+           
+        },
+        {
+            name: 'NPC Winner Morocco',
+            issuer: 'NPC Organization',
+            date: '2023',
+            
+        },
+        {
+            name: 'Moroccan Throne Competition Winner',
+            issuer: 'Morocco Sports Federation',
+            date: '2022',
+            
         }
     ];
 
@@ -66,7 +68,7 @@ const Skills = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                        <span className="gradient-text">Skills & Technologies</span>
+                        <span className="gradient-text">Skills</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                         Here are the areas and skills I coach and program as a fitness professional.
@@ -116,7 +118,7 @@ const Skills = () => {
                                 </div>
                             ))
                         ) : (
-                            <div className="text-center text-gray-400 col-span-3">Aucune compétence disponible pour cette catégorie.</div>
+                            <div className="text-center text-gray-400 col-span-3">Those are the basic points that i always concentrate on for a better transformation flow.</div>
                         )}
                     </div>
                 </div>
@@ -124,7 +126,7 @@ const Skills = () => {
                 {/* Certifications Section */}
                 <div className="text-center mb-12">
                     <h3 className="text-3xl font-bold mb-8">
-                        <span className="gradient-text">Certifications</span>
+                        <span className="gradient-text">Accomplishments</span>
                     </h3>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -150,23 +152,23 @@ const Skills = () => {
                 {/* Additional Info */}
                 <div className="grid md:grid-cols-2 gap-8 mt-16">
                     <div className="bg-gradient-to-br from-orange-600/10 to-orange-800/10 p-8 rounded-lg border border-orange-500/20">
-                        <h3 className="text-2xl font-bold mb-4 gradient-text">What I'm Learning</h3>
+                        <h3 className="text-2xl font-bold mb-4 gradient-text">Personal Qualities</h3>
                         <ul className="space-y-3 text-gray-300">
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                                Web3 & Blockchain Development
+                                Strong work ethic and dedication
                             </li>
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                                Machine Learning with TensorFlow
+                                Excellent communication skills
                             </li>
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                                Advanced DevOps with Kubernetes
+                                Adaptability and problem-solving skills
                             </li>
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                                Mobile Development with React Native
+                                Passion for helping others achieve their fitness goals
                             </li>
                         </ul>
                     </div>
@@ -176,19 +178,19 @@ const Skills = () => {
                         <ul className="space-y-3 text-gray-300">
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                                Clean, maintainable code
+                                Holistic fitness and wellness focus
                             </li>
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                                User-centered design thinking
+                                Client-centered program design
                             </li>
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                                Performance optimization
+                                Consistent motivation and support
                             </li>
                             <li className="flex items-center">
                                 <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                                Continuous learning & improvement
+                                Evidence-based training methods
                             </li>
                         </ul>
                     </div>
