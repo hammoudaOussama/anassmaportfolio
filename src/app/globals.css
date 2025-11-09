@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom gradient utility (orange/black theme) */
+.gradient-text {
+  @apply bg-gradient-to-r from-orange-700 to-black bg-clip-text text-transparent;
+}
+
+/* Button utilities */
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-800 rounded-lg text-white font-medium transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border-2 border-gray-600 rounded-lg text-gray-300 font-medium transition-all duration-300 hover:border-orange-500 hover:text-orange-500;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 24px rgba(234, 88, 12, 0.45);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
