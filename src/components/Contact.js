@@ -1,9 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Mail, Phone, MapPin, Send, Instagram } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,17 +26,32 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const result = await emailjs.sendForm(
+        'service_565f8tj', // Vous devrez remplacer ceci par votre ID de service EmailJS
+        'template_r6b01ko', // Vous devrez remplacer ceci par votre ID de template EmailJS
+        form.current,
+        'cXO6w3thU2gFCJ75e' // Vous devrez remplacer ceci par votre clé publique EmailJS
+      );
 
-      // Reset status after 3 seconds
+      if (result.text === 'OK') {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        // Reset status after 3 seconds
+        setTimeout(() => {
+          setSubmitStatus('');
+        }, 3000);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error sending email:', error);
+      // Reset error status after 3 seconds
       setTimeout(() => {
         setSubmitStatus('');
       }, 3000);
-    }, 2000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -147,7 +164,7 @@ const Contact = () => {
           <div className="bg-gray-800 p-8 rounded-xl border border-gray-700">
             <h3 className="text-2xl font-bold mb-6 text-orange-400">Send Message</h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               {/* Name and Email */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -238,7 +255,14 @@ const Contact = () => {
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
                   <p className="text-green-400 text-center">
-                    ✅ Message sent successfully! I'll get back to you soon.
+                    ✅ Message envoyé avec succès ! Je vous répondrai bientôt.
+                  </p>
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                  <p className="text-red-400 text-center">
+                    ❌ Erreur lors de l'envoi du message. Veuillez réessayer.
                   </p>
                 </div>
               )}

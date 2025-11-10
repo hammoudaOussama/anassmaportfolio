@@ -9,7 +9,7 @@ const Skills = () => {
 
     const skillCategories = {
         Strength: {
-            icon: <MdOutlineSportsKabaddi className="inline text-orange-400" size={22} />, 
+            icon: <MdOutlineSportsKabaddi className="inline text-orange-400" size={22} />,
             skills: [
                 { name: 'Strength Training', level: 95, color: 'from-orange-600 to-orange-800' },
                 { name: 'Hypertrophy Programming', level: 90, color: 'from-orange-500 to-orange-700' },
@@ -17,7 +17,7 @@ const Skills = () => {
             ]
         },
         Conditioning: {
-            icon: <MdDirectionsRun className="inline text-orange-400" size={22} />, 
+            icon: <MdDirectionsRun className="inline text-orange-400" size={22} />,
             skills: [
                 { name: 'Cardio Programming', level: 90, color: 'from-orange-500 to-orange-700' },
                 { name: 'Interval Training', level: 88, color: 'from-orange-400 to-orange-600' },
@@ -25,7 +25,7 @@ const Skills = () => {
             ]
         },
         Coaching: {
-            icon: <MdFitnessCenter className="inline text-orange-400" size={22} />, 
+            icon: <MdFitnessCenter className="inline text-orange-400" size={22} />,
             skills: [
                 { name: 'Personal Coaching', level: 95, color: 'from-orange-600 to-orange-800' },
                 { name: 'Group Classes', level: 90, color: 'from-orange-500 to-orange-700' },
@@ -47,19 +47,19 @@ const Skills = () => {
             name: 'CLub Competition Winner  Morocco',
             issuer: 'Morocco Sports Federation',
             date: '2022',
-           
+
         },
         {
             name: 'NPC Winner Morocco',
             issuer: 'NPC Organization',
             date: '2023',
-            
+
         },
         {
             name: 'Moroccan Throne Competition Winner',
             issuer: 'Morocco Sports Federation',
             date: '2022',
-            
+
         }
     ];
 
