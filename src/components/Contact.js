@@ -64,8 +64,8 @@ const Contact = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+212 684 815 450',
-      href: 'tel:+212684815450'
+      value: '+1 608 456-4756',
+      href: 'tel:+16084564756'
     },
     {
       icon: MapPin,
@@ -85,7 +85,7 @@ const Contact = () => {
     {
       icon: Phone,
       label: 'WhatsApp',
-      href: 'https://wa.me/212684815450',
+      href: 'https://wa.me/16084564756',
       color: 'hover:text-orange-400'
     },
   ];
@@ -110,41 +110,47 @@ const Contact = () => {
 
             {/* Contact Details */}
             <div className="space-y-6 mb-8">
-              {contactInfo.map((info, index) => (
-                <a
-                  key={index}
-                  href={info.href}
-                  className="flex items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
-                  target={info.href.startsWith('http') ? '_blank' : '_self'}
-                  rel={info.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-600 to-orange-800 rounded-lg flex items-center justify-center mr-4">
-                    <info.icon size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <div className="text-gray-400 text-sm">{info.label}</div>
-                    <div className="text-white font-medium">{info.value}</div>
-                  </div>
-                </a>
-              ))}
+              {contactInfo.map((info, index) => {
+                const InfoIcon = info.icon;
+                return (
+                  <a
+                    key={index}
+                    href={info.href}
+                    className="flex items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
+                    target={info.href.startsWith('http') ? '_blank' : '_self'}
+                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-600 to-orange-800 rounded-lg flex items-center justify-center mr-4">
+                      <InfoIcon size={20} className="text-white" />
+                    </div>
+                    <div>
+                      <div className="text-gray-400 text-sm">{info.label}</div>
+                      <div className="text-white font-medium">{info.value}</div>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
 
             {/* Social Links */}
             <div className="mb-8">
               <h4 className="text-lg font-semibold mb-4 text-white">Follow Me</h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className={`p-3 bg-gray-800 rounded-lg transition-all duration-300 transform hover:scale-110 ${social.color}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                  >
-                    <social.icon size={20} />
-                  </a>
-                ))}
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={social.href}
+                      className={`p-3 bg-gray-800 rounded-lg transition-all duration-300 transform hover:scale-110 ${social.color}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                    >
+                      <Icon size={20} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
 

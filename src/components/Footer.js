@@ -27,7 +27,7 @@ const Footer = () => {
     },
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/212684815450',
+      href: 'https://wa.me/',
       icon: Phone,
     },
     {
@@ -55,18 +55,21 @@ const Footer = () => {
               lifestyle changes through personalized coaching and programs.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-110"
-                  target={social.href.startsWith('mailto') ? '_self' : '_blank'}
-                  rel={social.href.startsWith('mailto') ? '' : 'noopener noreferrer'}
-                  aria-label={social.name}
-                >
-                  <social.icon size={20} className="text-gray-400 hover:text-orange-400 transition-colors" />
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-110"
+                    target={social.href.startsWith('mailto') ? '_self' : '_blank'}
+                    rel={social.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                    aria-label={social.name}
+                  >
+                    <Icon size={20} className="text-gray-400 hover:text-orange-400 transition-colors" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -93,8 +96,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Get In Touch</h4>
             <div className="space-y-2 text-gray-400">
               <p>📧 anassmaqboul06@gmail.com</p>
-              <p>📱(+212)684815450</p>
-              <p>📍 Casablanca, Morocco</p>
+              <p>📱(+1) 608 456-4756</p>
+              <p>📍 Casablanca, Morocco
+                📍 Cleveland, United States of America
+              </p>
               <div className="mt-4">
                 <div className="inline-flex items-center px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
                   <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>

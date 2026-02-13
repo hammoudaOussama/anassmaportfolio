@@ -19,16 +19,18 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-orange-400">Who I Am</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                I'm a certified fitness coach specializing in strength training, functional movement, and nutrition coaching. I create tailored programs that help clients build strength, lose fat, and improve mobility safely and effectively.
+                I’m an online fitness & nutrition coach helping people reshape their bodies using science-based training and realistic nutrition strategies.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Over the years, I've coached individuals and small groups across varied goals—from sports performance to general health. My approach focuses on progressive overload, balanced programming, and sustainable habit changes to deliver long-term results.
+                I don’t believe in extreme diets or random workouts.
+                My goal is to build a system you can follow for life — not just a short transformation.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                I believe in educating clients so they understand the why behind each session. Outside of training, I enjoy developing new workout plans, organizing community fitness events, and helping people discover healthier lifestyles.
+                Over the years I’ve worked with beginners and athletes, focusing on fat loss, muscle gain, posture improvement, and long-term habit change.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Available for in-person and remote coaching, program design, and group classes.
+                You won’t just get a program.
+                You’ll understand how your body works
               </p>
 
             </div>

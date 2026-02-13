@@ -15,7 +15,7 @@ const Header = () => {
             setIsScrolled(scrolled);
 
             // Update active section
-            const sections = ['home', 'about', 'skills', 'contact'];
+            const sections = ['home', 'about', 'skills', 'transformation', 'contact'];
             const scrollPosition = window.scrollY + 100;
 
             for (const section of sections) {
@@ -45,6 +45,7 @@ const Header = () => {
         { id: 'home', label: 'Home' },
         { id: 'about', label: 'About' },
         { id: 'skills', label: 'Programs' },
+        { id: 'transformation', label: 'Transformations' },
         { id: 'contact', label: 'Contact' },
     ];
 

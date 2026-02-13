@@ -5,7 +5,7 @@ import { MdDirectionsRun, MdFitnessCenter, MdOutlineSportsKabaddi } from 'react-
 
 
 const Skills = () => {
-    const [activeCategory, setActiveCategory] = useState('Frontend');
+    const [activeCategory, setActiveCategory] = useState('Strength');
 
     const skillCategories = {
         Strength: {
@@ -76,6 +76,79 @@ const Skills = () => {
                     <div className="w-24 h-1 bg-gradient-to-r from-orange-700 to-black mx-auto mt-6"></div>
                 </div>
 
+                {/* Intro Skill Section */}
+                <div className="mb-12 max-w-4xl mx-auto text-center">
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                        I specialize in helping clients achieve real results with personalized coaching. My key skills include:
+                    </p>
+
+                    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Personalized Fitness Programs</h4>
+                                <p className="text-sm text-gray-400">Tailored workouts for your goals &amp; lifestyle</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Fat Loss &amp; Body Recomposition</h4>
+                                <p className="text-sm text-gray-400">Effective strategies to lose fat &amp; gain lean muscle</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Muscle Building &amp; Strength Training</h4>
+                                <p className="text-sm text-gray-400">Progressive plans for strength &amp; hypertrophy</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Home &amp; Gym Workout Plans</h4>
+                                <p className="text-sm text-gray-400">Flexible programs for any environment</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Nutrition &amp; Meal Planning</h4>
+                                <p className="text-sm text-gray-400">Custom meal plans that fit your life</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Posture Correction &amp; Mobility</h4>
+                                <p className="text-sm text-gray-400">Improve movement, reduce injury risk</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Online Coaching &amp; Progress Tracking</h4>
+                                <p className="text-sm text-gray-400">Weekly follow-ups &amp; adjustments</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start p-4 bg-gray-800/40 rounded-lg border border-gray-700">
+                            <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <div>
+                                <h4 className="text-sm font-semibold text-white">Sustainable Lifestyle Habits</h4>
+                                <p className="text-sm text-gray-400">Build lasting healthy routines</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Skills Section */}
                 <div className="mb-16">
                     {/* Category Tabs */}
@@ -95,31 +168,56 @@ const Skills = () => {
                         ))}
                     </div>
 
-                    {/* Skills Grid */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {skillCategories[activeCategory] && skillCategories[activeCategory].skills ? (
-                            skillCategories[activeCategory].skills.map((skill, index) => (
-                                <div
-                                    key={skill.name}
-                                    className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-orange-500/50 transition-all duration-300"
-                                    style={{ animationDelay: `${index * 0.1}s` }}
-                                >
-                                    <div className="flex justify-between items-center mb-3">
-                                        <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
-                                        <span className="text-orange-400 font-medium">{skill.level}%</span>
+                    {/* Skills Table (responsive) */}
+                    <div className="overflow-x-auto">
+                        <div className="bg-gray-800 rounded-lg border border-gray-700">
+                            {/* Table Header */}
+                            <div className="grid grid-cols-12 gap-4 items-center px-4 py-3 border-b border-gray-700 text-gray-400">
+                                <div className="col-span-6 font-semibold">Skill</div>
+                                <div className="hidden md:block col-span-3 font-semibold">Level</div>
+                                <div className="col-span-6 md:col-span-3 text-right font-semibold">Progress</div>
+                            </div>
+
+                            {skillCategories[activeCategory] && skillCategories[activeCategory].skills ? (
+                                skillCategories[activeCategory].skills.map((skill, index) => (
+                                    <div
+                                        key={skill.name}
+                                        className="grid grid-cols-12 gap-4 items-center px-4 py-4 odd:bg-gray-900/20"
+                                        style={{ animationDelay: `${index * 0.05}s` }}
+                                    >
+                                        <div className="col-span-6 flex items-center">
+                                            <div className="mr-3 text-orange-400">{skill.icon ? skill.icon : ''}</div>
+                                            <div>
+                                                <h4 className="text-white font-medium">{skill.name}</h4>
+                                                <p className="text-sm text-gray-400 hidden md:block">{skill.description ? skill.description : ''}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="hidden md:flex col-span-3 items-center">
+                                            <span className="text-orange-400 font-semibold mr-2">{skill.level}%</span>
+                                            <div className="w-full bg-gray-700 rounded-full h-2">
+                                                <div
+                                                    className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
+                                                    style={{ width: `${skill.level}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-span-6 md:col-span-3 flex items-center justify-end">
+                                            <div className="w-32 md:w-48 bg-gray-700 rounded-full h-2 mr-3">
+                                                <div
+                                                    className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
+                                                    style={{ width: `${skill.level}%` }}
+                                                ></div>
+                                            </div>
+                                            <span className="text-gray-300 md:hidden">{skill.level}%</span>
+                                        </div>
                                     </div>
-                                    {/* Progress Bar */}
-                                    <div className="w-full bg-gray-700 rounded-full h-2">
-                                        <div
-                                            className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
-                                            style={{ width: `${skill.level}%` }}
-                                        ></div>
-                                    </div>
-                                </div>
-                            ))
-                        ) : (
-                            <div className="text-center text-gray-400 col-span-3">Those are the basic points that i always concentrate on for a better transformation flow.</div>
-                        )}
+                                ))
+                            ) : (
+                                <div className="text-center text-gray-400 p-6">Those are the basic points that I always concentrate on for a better transformation flow.</div>
+                            )}
+                        </div>
                     </div>
                 </div>
 
