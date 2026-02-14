@@ -14,6 +14,47 @@ const Skills = () => {
                 { name: 'Strength Training', level: 95, color: 'from-orange-600 to-orange-800' },
                 { name: 'Hypertrophy Programming', level: 90, color: 'from-orange-500 to-orange-700' },
                 { name: 'Barbell Techniques', level: 88, color: 'from-orange-600 to-orange-800' },
+            ],
+            strengthPrograms: [
+                {
+                    program: 'Stronglifts 5x5',
+                    emoji: '🏋️',
+                    duration: '12 weeks',
+                    focus: 'Compound Strength',
+                    exercises: [
+                        { name: 'Squat', sets: '5x5', intensity: '80-85% 1RM', notes: 'Heavy leg focus' },
+                        { name: 'Bench Press', sets: '5x5', intensity: '80-85% 1RM', notes: 'Upper body push' },
+                        { name: 'Barbell Row', sets: '5x5', intensity: '80-85% 1RM', notes: 'Upper body pull' },
+                        { name: 'Overhead Press', sets: '5x5', intensity: '75-80% 1RM', notes: 'Shoulder strength' },
+                        { name: 'Deadlift', sets: '1x5', intensity: '80-85% 1RM', notes: 'Full body power' }
+                    ]
+                },
+                {
+                    program: 'Hypertrophy Focus',
+                    emoji: '💪',
+                    duration: '8-12 weeks',
+                    focus: 'Muscle Growth',
+                    exercises: [
+                        { name: 'Incline Bench Press', sets: '4x6-8', intensity: '75-80% 1RM', notes: 'Upper chest' },
+                        { name: 'Dumbbell Flyes', sets: '3x8-10', intensity: '60-70% 1RM', notes: 'Isolation' },
+                        { name: 'Barbell Rows', sets: '4x6-8', intensity: '75-80% 1RM', notes: 'Back thickness' },
+                        { name: 'Weighted Pullups', sets: '4x6-8', intensity: '75-80% 1RM', notes: 'Lats focus' },
+                        { name: 'Leg Press', sets: '4x8-10', intensity: '70-75% 1RM', notes: 'Quad volume' }
+                    ]
+                },
+                {
+                    program: 'Powerlifting',
+                    emoji: '⚡',
+                    duration: '16 weeks',
+                    focus: 'Max Strength',
+                    exercises: [
+                        { name: 'Competition Squat', sets: '8x3', intensity: '85-90% 1RM', notes: 'Max strength' },
+                        { name: 'Competition Bench', sets: '8x3', intensity: '85-90% 1RM', notes: 'Max strength' },
+                        { name: 'Competition Deadlift', sets: '8x2', intensity: '85-90% 1RM', notes: 'Max strength' },
+                        { name: 'Speed Work', sets: '6x2', intensity: '60-70% 1RM', notes: 'Power development' },
+                        { name: 'Accessory Work', sets: '3x5', intensity: '70-75% 1RM', notes: 'Weak point training' }
+                    ]
+                }
             ]
         },
         Conditioning: {
@@ -22,6 +63,44 @@ const Skills = () => {
                 { name: 'Cardio Programming', level: 90, color: 'from-orange-500 to-orange-700' },
                 { name: 'Interval Training', level: 88, color: 'from-orange-400 to-orange-600' },
                 { name: 'Endurance Planning', level: 85, color: 'from-orange-400 to-orange-600' },
+            ],
+            pplProgram: [
+                {
+                    day: 'Push Day',
+                    emoji: '💪',
+                    exercises: [
+                        { name: 'Barbell Bench Press', sets: '4x6-8', rest: '2-3 min' },
+                        { name: 'Incline Dumbbell Press', sets: '3x8-10', rest: '90 sec' },
+                        { name: 'Barbell Overhead Press', sets: '3x6-8', rest: '2 min' },
+                        { name: 'Lateral Raise Machine', sets: '3x10-12', rest: '60 sec' },
+                        { name: 'Tricep Rope Pushdown', sets: '3x10-12', rest: '60 sec' },
+                        { name: 'Dips (Weighted)', sets: '3x8-10', rest: '90 sec' }
+                    ]
+                },
+                {
+                    day: 'Pull Day',
+                    emoji: '🔥',
+                    exercises: [
+                        { name: 'Deadlifts', sets: '4x3-5', rest: '3 min' },
+                        { name: 'Weighted Pullups', sets: '4x6-8', rest: '2-3 min' },
+                        { name: 'Barbell Rows', sets: '3x6-8', rest: '2 min' },
+                        { name: 'Lat Pulldown', sets: '3x8-10', rest: '90 sec' },
+                        { name: 'Barbell Curl', sets: '3x8-10', rest: '90 sec' },
+                        { name: 'Face Pulls', sets: '3x12-15', rest: '60 sec' }
+                    ]
+                },
+                {
+                    day: 'Leg Day',
+                    emoji: '🦵',
+                    exercises: [
+                        { name: 'Barbell Squat', sets: '4x6-8', rest: '2-3 min' },
+                        { name: 'Romanian Deadlift', sets: '3x8-10', rest: '2 min' },
+                        { name: 'Leg Press', sets: '3x8-10', rest: '2 min' },
+                        { name: 'Leg Curl Machine', sets: '3x10-12', rest: '90 sec' },
+                        { name: 'Leg Extension', sets: '3x10-12', rest: '90 sec' },
+                        { name: 'Calf Raises (Machine)', sets: '3x12-15', rest: '60 sec' }
+                    ]
+                }
             ]
         },
         Coaching: {
@@ -30,6 +109,64 @@ const Skills = () => {
                 { name: 'Personal Coaching', level: 95, color: 'from-orange-600 to-orange-800' },
                 { name: 'Group Classes', level: 90, color: 'from-orange-500 to-orange-700' },
                 { name: 'Program Design', level: 92, color: 'from-orange-600 to-orange-800' },
+            ],
+            coachingPrograms: [
+                {
+                    type: 'Personal Training',
+                    emoji: '👤',
+                    duration: 'Ongoing',
+                    focus: 'One-on-One Coaching',
+                    features: [
+                        { feature: 'Personalized Assessment', details: 'Initial fitness evaluation & goal setting' },
+                        { feature: 'Custom Programming', details: 'Tailored workouts based on individual needs' },
+                        { feature: 'Form Correction', details: 'Real-time feedback and technique optimization' },
+                        { feature: 'Progressive Overload', details: 'Structured progression over weeks/months' },
+                        { feature: 'Nutrition Guidance', details: 'Meal planning tailored to training goals' },
+                        { feature: 'Weekly Check-ins', details: 'Progress tracking and program adjustments' }
+                    ]
+                },
+                {
+                    type: 'Group Classes',
+                    emoji: '👥',
+                    duration: 'Class-based',
+                    focus: 'Fitness Community',
+                    features: [
+                        { feature: 'Circuit Training', details: 'Dynamic group workouts for all levels' },
+                        { feature: 'Team Motivation', details: 'Group energy and accountability' },
+                        { feature: 'Varied Programming', details: 'Different class themes each session' },
+                        { feature: 'Community Support', details: 'Build friendships & fitness network' },
+                        { feature: 'Beginner Friendly', details: 'Modifications available for all fitness levels' },
+                        { feature: 'Cost Effective', details: 'More affordable than 1-on-1 coaching' }
+                    ]
+                },
+                {
+                    type: 'Online Coaching',
+                    emoji: '💻',
+                    duration: 'Remote',
+                    focus: 'Digital Fitness',
+                    features: [
+                        { feature: 'Remote Programs', details: 'Customized workouts delivered digitally' },
+                        { feature: 'Video Form Checks', details: 'Submit videos for feedback & correction' },
+                        { feature: 'Flexible Scheduling', details: 'Work out on your own time & location' },
+                        { feature: 'Digital Communication', details: 'Chat support & regular check-ins' },
+                        { feature: 'Progress Tracking', details: 'Online dashboard to log workouts & nutrition' },
+                        { feature: 'Adaptable Plans', details: 'Modify based on available equipment' }
+                    ]
+                },
+                {
+                    type: 'Competition Prep',
+                    emoji: '🏆',
+                    duration: '12-16 weeks',
+                    focus: 'Sport-Specific Training',
+                    features: [
+                        { feature: 'Peak Programming', details: 'Periodized training for competition date' },
+                        { feature: 'Sport Analysis', details: 'Technical skill development & refinement' },
+                        { feature: 'Mental Conditioning', details: 'Confidence building & competition mindset' },
+                        { feature: 'Recovery Protocols', details: 'Optimize rest & regeneration' },
+                        { feature: 'Nutrition Timing', details: 'Pre/during/post competition strategies' },
+                        { feature: 'Taper Management', details: 'Strategic rest before competition' }
+                    ]
+                }
             ]
         },
         Nutrition: {
@@ -38,6 +175,43 @@ const Skills = () => {
                 { name: 'Meal Planning', level: 90, color: 'from-orange-500 to-orange-700' },
                 { name: 'Macro Coaching', level: 88, color: 'from-orange-400 to-orange-600' },
                 { name: 'Supplement Guidance', level: 82, color: 'from-orange-400 to-orange-600' },
+            ],
+            mealPlan: [
+                {
+                    meal: 'Breakfast',
+                    time: '7:00 AM',
+                    foods: 'Oatmeal with berries, honey, and almonds + Greek yogurt + green tea',
+                    calories: '450',
+                    macros: 'Carbs: 55g | Protein: 20g | Fat: 12g'
+                },
+                {
+                    meal: 'Mid-Morning Snack',
+                    time: '10:30 AM',
+                    foods: 'Banana with almond butter + protein shake',
+                    calories: '280',
+                    macros: 'Carbs: 35g | Protein: 25g | Fat: 8g'
+                },
+                {
+                    meal: 'Lunch',
+                    time: '1:00 PM',
+                    foods: 'Grilled chicken breast with brown rice and steamed broccoli + olive oil',
+                    calories: '520',
+                    macros: 'Carbs: 45g | Protein: 45g | Fat: 12g'
+                },
+                {
+                    meal: 'Afternoon Snack',
+                    time: '4:00 PM',
+                    foods: 'Mixed nuts (almonds, walnuts) + fresh apple',
+                    calories: '220',
+                    macros: 'Carbs: 25g | Protein: 8g | Fat: 10g'
+                },
+                {
+                    meal: 'Dinner',
+                    time: '7:00 PM',
+                    foods: 'Salmon fillet with sweet potato and green salad + avocado',
+                    calories: '480',
+                    macros: 'Carbs: 40g | Protein: 42g | Fat: 15g'
+                }
             ]
         }
     };
@@ -219,6 +393,223 @@ const Skills = () => {
                             )}
                         </div>
                     </div>
+
+                    {/* Nutrition Meal Plan Section */}
+                    {activeCategory === 'Nutrition' && skillCategories[activeCategory].mealPlan && (
+                        <div className="mt-12">
+                            <h3 className="text-2xl font-bold mb-8 text-center gradient-text">Healthy Diet Program - Daily Meal Plan</h3>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+                                {skillCategories[activeCategory].mealPlan.map((meal, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-800 border border-gray-700 rounded-lg p-5 hover:border-orange-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                                    >
+                                        <div className="flex items-center mb-3">
+                                            <span className="text-2xl mr-2">🍽️</span>
+                                            <div>
+                                                <h4 className="text-lg font-bold text-orange-400">{meal.meal}</h4>
+                                                <p className="text-sm text-gray-400">{meal.time}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="border-t border-gray-700 pt-3">
+                                            <p className="text-gray-300 text-sm mb-3 leading-relaxed">{meal.foods}</p>
+
+                                            <div className="space-y-2 text-xs">
+                                                <div className="flex justify-between items-center bg-gray-900/50 p-2 rounded">
+                                                    <span className="text-gray-400">Calories:</span>
+                                                    <span className="text-green-400 font-semibold">{meal.calories} kcal</span>
+                                                </div>
+                                                <div className="bg-gray-900/50 p-2 rounded text-gray-300">
+                                                    <p className="font-semibold text-orange-400 mb-1">Macros:</p>
+                                                    <p>{meal.macros}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="mt-8 p-6 bg-gradient-to-r from-orange-600/10 to-orange-800/10 rounded-lg border border-orange-500/20">
+                                <p className="text-gray-300 text-center text-sm">
+                                    <span className="text-orange-400 font-semibold">💡 Total Daily Calories: ~1,950 kcal</span><br />
+                                    This meal plan is designed for fat loss and muscle maintenance. Adjust portions based on your individual needs, activity level, and fitness goals.
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Conditioning PPL Program Section */}
+                    {activeCategory === 'Conditioning' && skillCategories[activeCategory].pplProgram && (
+                        <div className="mt-12">
+                            <h3 className="text-2xl font-bold mb-8 text-center gradient-text">Push Pull Legs (PPL) Program</h3>
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {skillCategories[activeCategory].pplProgram.map((workout, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden hover:border-orange-400/50 transition-all duration-300"
+                                    >
+                                        {/* Workout Header */}
+                                        <div className="bg-gradient-to-r from-orange-600 to-orange-800 p-4">
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-3xl">{workout.emoji}</span>
+                                                <h4 className="text-xl font-bold text-white">{workout.day}</h4>
+                                            </div>
+                                        </div>
+
+                                        {/* Exercises List */}
+                                        <div className="p-4">
+                                            <div className="space-y-3">
+                                                {workout.exercises.map((exercise, exIndex) => (
+                                                    <div
+                                                        key={exIndex}
+                                                        className="bg-gray-900/50 p-3 rounded border border-gray-700/50 hover:border-orange-400/30 transition-colors"
+                                                    >
+                                                        <h5 className="text-orange-400 font-semibold text-sm mb-2">{exercise.name}</h5>
+                                                        <div className="flex justify-between text-xs text-gray-400">
+                                                            <span>Sets: <span className="text-green-400 font-semibold">{exercise.sets}</span></span>
+                                                            <span>Rest: <span className="text-blue-400 font-semibold">{exercise.rest}</span></span>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Exercise Count */}
+                                        <div className="bg-gray-900/30 p-3 border-t border-gray-700">
+                                            <p className="text-center text-gray-400 text-xs">
+                                                <span className="text-orange-400 font-semibold">{workout.exercises.length}</span> exercises
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* PPL Program Info */}
+                            <div className="mt-8 p-6 bg-gradient-to-r from-orange-600/10 to-orange-800/10 rounded-lg border border-orange-500/20">
+                                <p className="text-gray-300 text-center text-sm">
+                                    <span className="text-orange-400 font-semibold">📅 Program Structure:</span><br />
+                                    Run 3 days per week (or 6 days with 2 rounds). Each session focuses on compound movements followed by isolation exercises for maximum muscle growth and strength gains.
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Strength Programs Section */}
+                    {activeCategory === 'Strength' && skillCategories[activeCategory].strengthPrograms && (
+                        <div className="mt-12">
+                            <h3 className="text-2xl font-bold mb-8 text-center gradient-text">Strength Training Programs</h3>
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {skillCategories[activeCategory].strengthPrograms.map((program, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden hover:border-orange-400/50 transition-all duration-300"
+                                    >
+                                        {/* Program Header */}
+                                        <div className="bg-gradient-to-r from-orange-600 to-orange-800 p-4">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-3xl">{program.emoji}</span>
+                                                    <div>
+                                                        <h4 className="text-lg font-bold text-white">{program.program}</h4>
+                                                        <p className="text-xs text-orange-200">{program.focus}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Program Info */}
+                                        <div className="p-4">
+                                            <div className="mb-4 flex justify-between items-center">
+                                                <span className="text-xs text-gray-400">Duration:</span>
+                                                <span className="text-sm text-orange-400 font-semibold">{program.duration}</span>
+                                            </div>
+
+                                            {/* Exercises */}
+                                            <div className="space-y-3">
+                                                {program.exercises.map((exercise, exIndex) => (
+                                                    <div
+                                                        key={exIndex}
+                                                        className="bg-gray-900/50 p-3 rounded border border-gray-700/50 hover:border-orange-400/30 transition-colors"
+                                                    >
+                                                        <h5 className="text-orange-400 font-semibold text-sm mb-1">{exercise.name}</h5>
+                                                        <div className="flex justify-between text-xs text-gray-400 mb-1">
+                                                            <span>Sets: <span className="text-green-400">{exercise.sets}</span></span>
+                                                            <span>Intensity: <span className="text-blue-400">{exercise.intensity}</span></span>
+                                                        </div>
+                                                        <p className="text-xs text-gray-500 italic">{exercise.notes}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Strength Info */}
+                            <div className="mt-8 p-6 bg-gradient-to-r from-orange-600/10 to-orange-800/10 rounded-lg border border-orange-500/20">
+                                <p className="text-gray-300 text-center text-sm">
+                                    <span className="text-orange-400 font-semibold">💪 Training Philosophy:</span><br />
+                                    Each program is periodized for maximum strength gains. Proper technique, adequate recovery, and progressive overload are essential for success.
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Coaching Programs Section */}
+                    {activeCategory === 'Coaching' && skillCategories[activeCategory].coachingPrograms && (
+                        <div className="mt-12">
+                            <h3 className="text-2xl font-bold mb-8 text-center gradient-text">Coaching Services & Programs</h3>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                {skillCategories[activeCategory].coachingPrograms.map((program, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden hover:border-orange-400/50 transition-all duration-300"
+                                    >
+                                        {/* Program Header */}
+                                        <div className="bg-gradient-to-r from-orange-600 to-orange-800 p-4">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-3">
+                                                    <span className="text-3xl">{program.emoji}</span>
+                                                    <div>
+                                                        <h4 className="text-lg font-bold text-white">{program.type}</h4>
+                                                        <p className="text-xs text-orange-200">{program.focus}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Program Info */}
+                                        <div className="p-4">
+                                            <p className="text-xs text-gray-400 mb-4">
+                                                <span className="text-orange-400 font-semibold">Duration:</span> {program.duration}
+                                            </p>
+
+                                            {/* Features */}
+                                            <div className="space-y-3">
+                                                {program.features.map((item, itemIndex) => (
+                                                    <div
+                                                        key={itemIndex}
+                                                        className="bg-gray-900/50 p-3 rounded border border-gray-700/50 hover:border-orange-400/30 transition-colors"
+                                                    >
+                                                        <h5 className="text-orange-400 font-semibold text-sm mb-1">{item.feature}</h5>
+                                                        <p className="text-xs text-gray-400">{item.details}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Coaching Info */}
+                            <div className="mt-8 p-6 bg-gradient-to-r from-orange-600/10 to-orange-800/10 rounded-lg border border-orange-500/20">
+                                <p className="text-gray-300 text-center text-sm">
+                                    <span className="text-orange-400 font-semibold">🎯 Coaching Excellence:</span><br />
+                                    I adapt my coaching style to match each client's personality and goals. Whether you prefer one-on-one guidance, group motivation, or remote support, I'm here to help you succeed.
+                                </p>
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Certifications Section */}
