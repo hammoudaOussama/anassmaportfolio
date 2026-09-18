@@ -167,6 +167,50 @@ const Skills = () => {
                         { feature: 'Taper Management', details: 'Strategic rest before competition' }
                     ]
                 }
+            ],
+            pricingPackages: [
+                {
+                    name: 'Starter Pack',
+                    price: 'MAD 1,000',
+                    billing: 'par mois',
+                    badge: 'Best for beginners',
+                    highlight: false,
+                    advantages: [
+                        'Fitness assessment and goal review',
+                        '2 tailored training sessions per week',
+                        'Basic nutrition guidance',
+                        'Weekly progress check-in',
+                        'Access to habit tracking template'
+                    ]
+                },
+                {
+                    name: 'Transformation Pack',
+                    price: 'MAD 2,799',
+                    billing: 'par mois',
+                    badge: 'Most popular',
+                    highlight: true,
+                    advantages: [
+                        'Full customized training program',
+                        'Weekly coaching and form feedback',
+                        'Meal plan and macro guidance',
+                        'Progress tracking and body recomposition plan',
+                        'Priority support and program updates'
+                    ]
+                },
+                {
+                    name: 'Elite Pack',
+                    price: 'MAD 4,499',
+                    billing: 'par mois',
+                    badge: 'Premium coaching',
+                    highlight: false,
+                    advantages: [
+                        '1-on-1 personal coaching',
+                        'Advanced nutrition and supplementation plan',
+                        'Competition or performance optimization',
+                        'Unlimited check-ins and message support',
+                        'Priority scheduling and custom strategy calls'
+                    ]
+                }
             ]
         },
         Nutrition: {
@@ -565,7 +609,6 @@ const Skills = () => {
                                         key={index}
                                         className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden hover:border-orange-400/50 transition-all duration-300"
                                     >
-                                        {/* Program Header */}
                                         <div className="bg-gradient-to-r from-orange-600 to-orange-800 p-4">
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center gap-3">
@@ -578,13 +621,11 @@ const Skills = () => {
                                             </div>
                                         </div>
 
-                                        {/* Program Info */}
                                         <div className="p-4">
                                             <p className="text-xs text-gray-400 mb-4">
                                                 <span className="text-orange-400 font-semibold">Duration:</span> {program.duration}
                                             </p>
 
-                                            {/* Features */}
                                             <div className="space-y-3">
                                                 {program.features.map((item, itemIndex) => (
                                                     <div
@@ -600,16 +641,44 @@ const Skills = () => {
                                     </div>
                                 ))}
                             </div>
-
-                            {/* Coaching Info */}
-                            <div className="mt-8 p-6 bg-gradient-to-r from-orange-600/10 to-orange-800/10 rounded-lg border border-orange-500/20">
-                                <p className="text-gray-300 text-center text-sm">
-                                    <span className="text-orange-400 font-semibold">🎯 Coaching Excellence:</span><br />
-                                    I adapt my coaching style to match each client's personality and goals. Whether you prefer one-on-one guidance, group motivation, or remote support, I'm here to help you succeed.
-                                </p>
-                            </div>
                         </div>
                     )}
+                </div>
+
+                {/* Pricing Section */}
+                <div className="mt-10" id="pricing">
+                    <h3 className="text-2xl font-bold mb-6 text-center gradient-text">Coaching Packs & Pricing</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {skillCategories.Coaching.pricingPackages.map((pack, index) => (
+                            <div
+                                key={index}
+                                className={`rounded-2xl border p-6 transition-all duration-300 ${pack.highlight
+                                    ? 'bg-gradient-to-b from-orange-600/20 to-orange-800/10 border-orange-500 shadow-lg shadow-orange-900/20'
+                                    : 'bg-gray-800 border-gray-700 hover:border-orange-400/50'}`}
+                            >
+                                <div className="text-center mb-4">
+                                    <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">
+                                        {pack.badge}
+                                    </span>
+                                    <h4 className="text-xl font-bold text-white">{pack.name}</h4>
+                                </div>
+
+                                <div className="text-center mb-5">
+                                    <span className="text-4xl font-black text-orange-400">{pack.price}</span>
+                                    <span className="text-sm text-gray-400 ml-2">{pack.billing}</span>
+                                </div>
+
+                                <ul className="space-y-3 text-sm text-gray-300">
+                                    {pack.advantages.map((advantage, advIndex) => (
+                                        <li key={advIndex} className="flex items-start">
+                                            <span className="text-orange-400 mt-1 mr-2">✓</span>
+                                            <span>{advantage}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Certifications Section */}
