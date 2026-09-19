@@ -281,6 +281,19 @@ const Skills = () => {
         }
     ];
 
+    const certificationGallery = [
+        {
+            title: 'Certified Fitness Coach',
+            image: '/images/certificate1.jpeg',
+            description: 'A professional coaching credential showcasing my training, athlete development, and performance-focused expertise.'
+        },
+        {
+            title: 'Advanced Nutrition & Conditioning',
+            image: '/images/certificate2.jpeg',
+            description: 'A certification highlighting my knowledge in nutrition, body transformation, and structured conditioning programs.'
+        }
+    ];
+
     return (
         <section id="skills" className="py-20 px-4 bg-gray-800/30">
             <div className="max-w-7xl mx-auto">
@@ -676,6 +689,29 @@ const Skills = () => {
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Certification Section */}
+                <div id="certification" className="mt-16 mb-12">
+                    <h3 className="text-2xl font-bold mb-8 text-center gradient-text">Certification</h3>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {certificationGallery.map((item, index) => (
+                            <div
+                                key={index}
+                                className="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden hover:border-orange-400/50 transition-all duration-300"
+                            >
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="w-full h-80 object-cover border-b border-gray-700"
+                                />
+                                <div className="p-6">
+                                    <h4 className="text-xl font-bold text-orange-400 mb-3">{item.title}</h4>
+                                    <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
